@@ -1,0 +1,19 @@
+/* clearfix */
+=clr
+	&:after 
+		content: ''
+		display: block
+		clear: both 
+
+/* border-radius mixin */
+@mixin br($width)
+	-webkit-border-radius: $width
+	-moz-border-radius: $width
+	border-radius: $width
+
+
+/* box-shadow mixin */
+@mixin bsh
+	-webkit-box-shadow: inset 14px -17px 82px -41px rgba(0,0,0,0.75)
+	-moz-box-shadow: inset 14px -17px 82px -41px rgba(0,0,0,0.75)
+	box-shadow: inset 14px -17px 82px -41px rgba(0,0,0,0.75)

@@ -1,0 +1,186 @@
+@import 'mixin.sass'
+
+// colors: 
+$black: #000
+$lightBrown: #c6af81
+$white: #fff
+$blue: #345ba0
+
+
+// -------- General --------
+
+body 
+	min-height: 2000px
+	padding-top: 80px
+
+// -------- Navigation --------
+
+.navbar
+	background-color: $white
+
+#navbar.navbar-collapse 
+	margin: 15px
+
+
+.navbar-nav
+	.navbar_listitems
+		text-transform: uppercase
+		padding-left: 50px;
+		a 
+			font-family: PTSansRegular
+			color: $black
+
+.navbar-right
+	li
+		text-align: left
+	.phone 
+		font-family: PTSansRegular
+		font-size: 18px
+	.callMe
+		color: $blue
+		text-decoration: none
+		border-bottom: 1px dashed $blue
+
+
+// -------- Main Slider --------
+
+#mainCarousel 
+	margin-bottom: 35px
+	.img-responsive
+		width: 100%
+
+
+.carousel-caption
+	position: absolute
+	top: 125px
+	h1 
+		font-family: PTSansBold
+		font-size: 46px
+		line-height: 1.1
+    	margin: 0 0 25px
+	p 
+		font-size: 24px
+		margin-bottom: 46px
+	
+	button
+		color: $white
+		font-size: 18px
+		padding: 10px
+		background-color: $lightBrown
+		border: 1px solid $lightBrown
+		@include br(5px)
+		@include bsh
+		text-decoration: none
+
+.carousel-control.right
+	background-image: none
+	width: 160px
+
+.carousel-control.left
+	background-image: none
+	width: 65px
+
+.carousel-control_arrow 
+    position: absolute
+    top: 43%
+    z-index: 5
+    display: inline-block
+
+// -------- Modal GetConsult --------
+
+#consultModal0
+	.modal-title
+		text-transform: uppercase
+
+// -------- Poslugy --------
+
+.poslugy
+	text-align: center
+	margin-bottom: 95px
+	.row2 
+		margin-top: 17px
+
+
+.poslugy_h2
+	color: #345ba0
+	font-size: 20px
+
+.underline
+	width: 94px
+	margin: 12px auto
+	border-bottom: 1px solid $lightBrown
+
+.button_img 
+	@include br(5px)
+	color: $lightBrown
+
+.poslugy_text 
+	min-height: 91px
+
+.poslugy_button 
+	background-color: $white
+	padding: 5px 20px
+	border: 1px solid #345ba0
+	@include br(5px)
+
+
+
+// -------- Clients --------
+
+.fieldset_clients
+	border: 4px solid $lightBrown
+	height: 318px
+	padding: 65px 40px 80px 30px
+
+.legent_clients
+	width: auto
+	text-align: center
+	text-transform: uppercase
+	border-bottom: none
+
+#clientsCarousel 
+	.carousel-indicators
+		list-style: square
+	.carousel-indicators.active
+		background-color: $blue
+
+// -------- Media queries --------
+
+
+@media screen and (max-width: 1200px)
+	.navbar-nav
+		.navbar_listitems
+			padding-left: 10px;
+	.carousel-caption
+		position: absolute
+		top: 50px
+		h1
+			font-size: 34px
+		button
+			font-size: 16px
+
+@media screen and (max-width: 860px)
+	.carousel-caption
+		position: absolute
+		top: 0px
+		p
+			margin-bottom: 10px
+
+@media screen and (max-width: 660px)
+	.carousel-caption
+		h1
+			font-size: 20px
+		p
+			font-size: 14px
+			margin-bottom: 30px
+
+
+@media screen and (max-width: 500px)
+	.carousel-caption
+		h1
+			font-size: 14px
+		p
+			font-size: 12px
+			margin-bottom: 15px
+		button
+			font-size: 12px
